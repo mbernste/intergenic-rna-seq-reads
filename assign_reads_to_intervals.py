@@ -12,7 +12,6 @@ def main():
 
     bam = pysam.AlignmentFile(bam_f, 'rb')
 
-
     da = []
     for r_i, row in intrs_df.iterrows():
         if r_i % 10000 == 0:
@@ -23,6 +22,13 @@ def main():
         end = row['interval_end']
         
         reads = list(bam.fetch(chrm, begin, end))
+
+
+        #if int_id == 'chr1.244617_244817':
+        #    print([x.to_dict() for x in reads[:10]])
+        #if int_id == 'chr1.247217_247417':
+        #    print([x.to_dict() for x in reads[:10]])
+
         da.append((int_id, chrm, begin, end, len(reads)))
 
     df = pd.DataFrame(
