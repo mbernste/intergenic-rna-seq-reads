@@ -53,3 +53,14 @@ rule assign_RNA_seq_reads_to_intervals:
     run:
         c = 'python assign_reads_to_intervals.py {input.intervals} {input.bam} {output}'
         shell(c)
+
+## Interval size of 400
+rule create_quantifiable_intervals_400bp:
+    input:
+        './output/intergenic_intervals_with_gene_buffers.tsv'
+    output:
+        './output/intergenic_intervals_for_quantification.400_bp.tsv'
+    run:
+        c = 'python create_quantifiable_intervals.py {input} {output} 400'
+        shell(c)
+

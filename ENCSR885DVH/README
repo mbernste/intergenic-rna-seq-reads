@@ -1,0 +1,15 @@
+total RNA-seq
+--------------
+File: ENCFF625ZBS.bam 
+URL: https://www.encodeproject.org/files/ENCFF625ZBS/
+
+ATAC-seq
+--------------
+File: ENCFF251PDI.bam
+URL: https://www.encodeproject.org/files/ENCFF251PDI/
+
+File: ENCFF879FSD.bed
+URL: https://www.encodeproject.org/files/ENCFF879FSD/
+Description: These are replicated peaks from multiple technical replicates
+    output by ENCODE's ATAC-seq pipeline. File ENCFF251PDI.bam is a 
+    predecessor in the pipeline used to construct this file.
